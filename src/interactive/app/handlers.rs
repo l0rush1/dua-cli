@@ -676,9 +676,7 @@ fn annotation_message(cleanup_count: usize, gitignored_count: usize) -> Option<S
             };
             Some(format!("{gitignored} {label} (I)"))
         }
-        (cleanup, gitignored) => {
-            Some(format!("{cleanup} cleanup, {gitignored} gitignored (X|I)"))
-        }
+        (cleanup, gitignored) => Some(format!("{cleanup} cleanup, {gitignored} gitignored (X|I)")),
     }
 }
 
